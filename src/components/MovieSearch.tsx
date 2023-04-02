@@ -103,7 +103,7 @@ const MovieSearch = ({selectedMovie, setSelectedMovie}: Props) => {
       })
       .finally(() => {
         setLoading(false)
-        cacheQuery(debouncedQuery)
+        cacheQuery(debouncedQuery.trim())
       })
   }, [debouncedQuery])
 
