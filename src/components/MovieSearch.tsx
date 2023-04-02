@@ -76,7 +76,7 @@ const MovieSearch = ({selectedMovie, setSelectedMovie}: Props) => {
 
       queries.unshift(latestQuery)
 
-      localStorageService.setItem(latestQueriesStorageKey, queries)
+      localStorageService.setItem(latestQueriesStorageKey, queries.slice(0, 5))
     } else {
       localStorageService.setItem(latestQueriesStorageKey, [latestQuery])
     }
